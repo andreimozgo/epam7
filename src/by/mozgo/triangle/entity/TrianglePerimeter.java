@@ -1,10 +1,11 @@
 package by.mozgo.triangle.entity;
 
 import by.mozgo.triangle.logic.TriangleLogic;
-import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
+import org.apache.logging.log4j.LogManager;
 import java.util.ArrayList;
+
+
 
 /**
  * @author Andrei Mozgo
