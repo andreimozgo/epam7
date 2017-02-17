@@ -1,5 +1,6 @@
-package by.mozgo.triangle.entity;
+package by.mozgo.triangle.observer;
 
+import by.mozgo.triangle.entity.Triangle;
 import by.mozgo.triangle.logic.TriangleLogic;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;

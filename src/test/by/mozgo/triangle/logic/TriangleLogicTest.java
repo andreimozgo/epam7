@@ -2,8 +2,8 @@ package test.by.mozgo.triangle.logic;
 
 import by.mozgo.triangle.entity.Point;
 import by.mozgo.triangle.entity.Triangle;
-import by.mozgo.triangle.entity.TrianglePerimeter;
-import by.mozgo.triangle.entity.TriangleSquare;
+import by.mozgo.triangle.observer.TrianglePerimeter;
+import by.mozgo.triangle.observer.TriangleSquare;
 import by.mozgo.triangle.logic.TriangleLogic;
 import org.junit.After;
 import org.junit.Assert;

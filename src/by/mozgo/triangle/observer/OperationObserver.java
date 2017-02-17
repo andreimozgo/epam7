@@ -1,4 +1,6 @@
-package by.mozgo.triangle.entity;
+package by.mozgo.triangle.observer;
+
+import by.mozgo.triangle.entity.Triangle;
 
 /**
  * @author Andrei Mozgo

@@ -1,6 +1,9 @@
 package by.mozgo.triangle.entity;
 
 import by.mozgo.triangle.logic.TriangleLogic;
+import by.mozgo.triangle.observer.OperationObserver;
+import by.mozgo.triangle.observer.TrianglePerimeter;
+import by.mozgo.triangle.observer.TriangleSquare;
 
 import java.util.ArrayList;
 import java.util.Iterator;
