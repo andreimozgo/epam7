@@ -2,8 +2,6 @@ package by.mozgo.triangle.entity;
 
 import by.mozgo.triangle.logic.TriangleLogic;
 import by.mozgo.triangle.observer.OperationObserver;
-import by.mozgo.triangle.observer.TrianglePerimeter;
-import by.mozgo.triangle.observer.TriangleSquare;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -16,8 +14,6 @@ public class Triangle {
     private Point firstPoint;
     private Point secondPoint;
     private Point thirdPoint;
-    private TrianglePerimeter perimeter = new TrianglePerimeter();
-    private TriangleSquare square = new TriangleSquare();
     private ArrayList<OperationObserver> observerList = new ArrayList();
 
     public Triangle(int id, Point firstPoint, Point secondPoint, Point thirdPoint) {
