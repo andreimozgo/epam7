@@ -5,6 +5,7 @@ import by.mozgo.triangle.observer.OperationObserver;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * @author Andrei Mozgo
@@ -14,7 +15,7 @@ public class Triangle {
     private Point firstPoint;
     private Point secondPoint;
     private Point thirdPoint;
-    private ArrayList<OperationObserver> observerList = new ArrayList();
+    private List<OperationObserver> observerList = new ArrayList<>();
 
     public Triangle(int id, Point firstPoint, Point secondPoint, Point thirdPoint) {
         this.id = id;
