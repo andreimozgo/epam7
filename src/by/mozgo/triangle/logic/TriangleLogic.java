@@ -2,8 +2,8 @@ package by.mozgo.triangle.logic;
 
 import by.mozgo.triangle.entity.Point;
 import by.mozgo.triangle.entity.Triangle;
-import by.mozgo.triangle.observer.TrianglePerimeter;
-import by.mozgo.triangle.observer.TriangleSquare;
+import by.mozgo.triangle.observer.impl.TrianglePerimeter;
+import by.mozgo.triangle.observer.impl.TriangleSquare;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
