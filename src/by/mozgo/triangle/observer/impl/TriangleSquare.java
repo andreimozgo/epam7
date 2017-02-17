@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class TriangleSquare implements OperationObserver {
     private static TriangleSquare instance = null;
-    private static final Logger logger = LogManager.getLogger();
+    private static final Logger LOGGER = LogManager.getLogger();
     private ArrayList<Double> squares = new ArrayList<>();
 
     public static TriangleSquare getInstance() {
@@ -34,9 +34,9 @@ public class TriangleSquare implements OperationObserver {
     @Override
     public void valueChanged(Triangle observed) {
         int id = observed.getId();
-        logger.info("Old triangular square= " + squares.get(id));
+        LOGGER.info("Old triangular square= " + squares.get(id));
         double newSquare = TriangleLogic.calculateSquare(observed).getSquares().get(id);
         squares.set(observed.getId(), newSquare);
-        logger.info("New triangular square= " + squares.get(id));
+        LOGGER.info("New triangular square= " + squares.get(id));
     }
 }

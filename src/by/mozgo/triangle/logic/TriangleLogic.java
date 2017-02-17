@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Logger;
  * @author Andrei Mozgo
  */
 public class TriangleLogic {
-    private static final Logger logger = LogManager.getLogger();
+    private static final Logger LOGGER = LogManager.getLogger();
 
     public static TrianglePerimeter calculatePerimeter(Triangle triangle) {
         TrianglePerimeter trianglePerimeter = TrianglePerimeter.getInstance();
@@ -21,7 +21,7 @@ public class TriangleLogic {
         double thirdSide = calculateTriangleSide(triangle.getFirstPoint(), triangle.getThirdPoint());
         double perimeter = firstSide + secondSide + thirdSide;
         trianglePerimeter.getPerimeters().add(triangle.getId(), perimeter);
-        logger.info("Triangle perimeter = "+ perimeter);
+        LOGGER.info("Triangle perimeter = "+ perimeter);
         return trianglePerimeter;
     }
 
@@ -33,7 +33,7 @@ public class TriangleLogic {
         double halfPerimeter = 0.5 * (firstSide + secondSide + thirdSide);
         double square = Math.sqrt(halfPerimeter * (halfPerimeter - firstSide) * (halfPerimeter - secondSide) * (halfPerimeter - thirdSide));
         triangleSquare.getSquares().add(triangle.getId(), square);
-        logger.info("Triangle square = "+ square);
+        LOGGER.info("Triangle square = "+ square);
         return triangleSquare;
     }
 
