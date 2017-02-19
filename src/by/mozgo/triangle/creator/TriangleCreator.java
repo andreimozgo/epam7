@@ -17,16 +17,20 @@ public class TriangleCreator {
     private static List<Triangle> triangles = new ArrayList<>();
 
     public static List<Triangle> generateTriangles(ArrayList<String> inputLines) {
-        for (int i =1; i <= inputLines.size();i++) {
-            String line = inputLines.get(i-1);
-            String[] points = line.split("\\s");
-            if (points.length != MAX_NUMBER_OF_COORDINATES) {
+        for (int i = 1; i <= inputLines.size(); i++) {
+            String line = inputLines.get(i - 1);
+            String[] coordinates = line.split("\\s");
+            if (coordinates.length != MAX_NUMBER_OF_COORDINATES) {
                 LOGGER.error("Incorrect input line");
             }
-            Point firstPoint = new Point(Integer.valueOf(points[0]),Integer.valueOf(points[1]));
-            Point secondPoint = new Point(Integer.valueOf(points[2]),Integer.valueOf(points[3]));
-            Point thirdPoint = new Point(Integer.valueOf(points[4]),Integer.valueOf(points[5]));
-            triangles.add(new Triangle(i,firstPoint,secondPoint,thirdPoint));
+            try {
+                Point firstPoint = new Point(Integer.valueOf(coordinates[0]), Integer.valueOf(coordinates[1]));
+                Point secondPoint = new Point(Integer.valueOf(coordinates[2]), Integer.valueOf(coordinates[3]));
+                Point thirdPoint = new Point(Integer.valueOf(coordinates[4]), Integer.valueOf(coordinates[5]));
+                triangles.add(new Triangle(i, firstPoint, secondPoint, thirdPoint));
+            } catch (NumberFormatException e) {
+                LOGGER.error("Incorrect input line", e);
+            }
         }
         return triangles;
     }
