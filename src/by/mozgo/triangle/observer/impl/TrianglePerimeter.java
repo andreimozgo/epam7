@@ -26,10 +26,6 @@ public class TrianglePerimeter implements OperationObserver {
         return perimeters;
     }
 
-    public void setPerimeters(ArrayList<Double> perimeters) {
-        this.perimeters = perimeters;
-    }
-
     @Override
     public void valueChanged(Triangle observed) {
         int id = observed.getId();

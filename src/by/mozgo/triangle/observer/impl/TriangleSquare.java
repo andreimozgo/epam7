@@ -27,10 +27,6 @@ public class TriangleSquare implements OperationObserver {
         return squares;
     }
 
-    public void setSquares(ArrayList<Double> squares) {
-        this.squares = squares;
-    }
-
     @Override
     public void valueChanged(Triangle observed) {
         int id = observed.getId();
