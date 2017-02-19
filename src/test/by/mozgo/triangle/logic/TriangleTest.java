@@ -13,7 +13,7 @@ public class TriangleTest {
 
     @Test
     public void testTriangleExist() {
-        int id = 1;
+        int id = 0;
         Point firstPoint = new Point(0, 0);
         Point secondPoint = new Point(1, 0);
         Point thirdPoint = new Point(0, 1);

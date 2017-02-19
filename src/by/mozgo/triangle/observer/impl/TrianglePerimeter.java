@@ -30,7 +30,7 @@ public class TrianglePerimeter implements OperationObserver {
 
     @Override
     public void valueChanged(Triangle observed) {
-        int id = observed.getId()-1;
+        int id = observed.getId();
         LOGGER.info("Old triangular perimeter= " + perimeters.get(id));
         double newPerimeter = TriangleLogic.calculatePerimeter(observed).getPerimeters().get(id);
         perimeters.set(observed.getId(), newPerimeter);

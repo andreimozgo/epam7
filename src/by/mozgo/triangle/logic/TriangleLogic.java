@@ -20,7 +20,7 @@ public class TriangleLogic {
         double secondSide = calculateSide(triangle.getSecondPoint(), triangle.getThirdPoint());
         double thirdSide = calculateSide(triangle.getFirstPoint(), triangle.getThirdPoint());
         double perimeter = firstSide + secondSide + thirdSide;
-        trianglePerimeter.getPerimeters().add(triangle.getId() - 1, perimeter);
+        trianglePerimeter.getPerimeters().add(triangle.getId(), perimeter);
         LOGGER.info("Triangle id=" + triangle.getId() + " perimeter = " + perimeter);
         return trianglePerimeter;
     }
@@ -32,7 +32,7 @@ public class TriangleLogic {
         double thirdSide = calculateSide(triangle.getFirstPoint(), triangle.getThirdPoint());
         double halfPerimeter = 0.5 * (firstSide + secondSide + thirdSide);
         double square = Math.sqrt(halfPerimeter * (halfPerimeter - firstSide) * (halfPerimeter - secondSide) * (halfPerimeter - thirdSide));
-        triangleSquare.getSquares().add(triangle.getId() - 1, square);
+        triangleSquare.getSquares().add(triangle.getId(), square);
         LOGGER.info("Triangle id=" + triangle.getId() + " square = " + square);
         return triangleSquare;
     }

@@ -18,8 +18,8 @@ public class TriangleCreator {
     public static List<Triangle> generateTriangles(ArrayList<String> inputLines) {
         List<Triangle> triangles = new ArrayList<>();
 
-        for (int i = 1; i <= inputLines.size(); i++) {
-            String line = inputLines.get(i - 1);
+        for (int i = 0; i < inputLines.size(); i++) {
+            String line = inputLines.get(i);
             String[] coordinates = line.split("\\s");
             if (coordinates.length != MAX_NUMBER_OF_COORDINATES) {
                 LOGGER.error("Incorrect input line");

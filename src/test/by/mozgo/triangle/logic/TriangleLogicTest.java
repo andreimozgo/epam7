@@ -22,7 +22,7 @@ public class TriangleLogicTest {
 
     @Before
     public void initTriangle(){
-        id = 1;
+        id = 0;
         firstPoint = new Point(0, 0);
         secondPoint = new Point(1, 0);
         thirdPoint = new Point(0, 1);

@@ -21,7 +21,7 @@ public class OperationObserverTest {
 
     @Before
     public void initTriangle() {
-        id = 1;
+        id = 0;
         firstPoint = new Point(0, 0);
         secondPoint = new Point(1, 0);
         thirdPoint = new Point(0, 1);
@@ -36,22 +36,22 @@ public class OperationObserverTest {
     @Test
     public void testValueChangedPerimeter() {
         TrianglePerimeter trianglePerimeter = TrianglePerimeter.getInstance();
-        double perimeter = trianglePerimeter.getPerimeters().get(id-1);
+        double perimeter = trianglePerimeter.getPerimeters().get(id);
         triangle.addObserver(trianglePerimeter);
         Point newFirstPoint = new Point(-1, -1);
         triangle.setFirstPoint(newFirstPoint);
-        double changedPerimeter = trianglePerimeter.getPerimeters().get(id-1);
+        double changedPerimeter = trianglePerimeter.getPerimeters().get(id);
         Assert.assertNotEquals(perimeter,changedPerimeter);
     }
 
     @Test
     public void testValueChangedSquare() {
         TriangleSquare triangleSquare = TriangleSquare.getInstance();
-        double square = triangleSquare.getSquares().get(id-1);
+        double square = triangleSquare.getSquares().get(id);
         triangle.addObserver(triangleSquare);
         Point newFirstPoint = new Point(-1, -1);
         triangle.setFirstPoint(newFirstPoint);
-        double changedSquare = triangleSquare.getSquares().get(id-1);
+        double changedSquare = triangleSquare.getSquares().get(id);
         Assert.assertNotEquals(square,changedSquare);
     }
 }
