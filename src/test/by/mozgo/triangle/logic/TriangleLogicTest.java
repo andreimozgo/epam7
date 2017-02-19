@@ -2,9 +2,9 @@ package test.by.mozgo.triangle.logic;
 
 import by.mozgo.triangle.entity.Point;
 import by.mozgo.triangle.entity.Triangle;
+import by.mozgo.triangle.logic.TriangleLogic;
 import by.mozgo.triangle.observer.impl.TrianglePerimeter;
 import by.mozgo.triangle.observer.impl.TriangleSquare;
-import by.mozgo.triangle.logic.TriangleLogic;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -22,7 +22,7 @@ public class TriangleLogicTest {
 
     @Before
     public void initTriangle(){
-        id = 0;
+        id = 1;
         firstPoint = new Point(0, 0);
         secondPoint = new Point(1, 0);
         thirdPoint = new Point(0, 1);
