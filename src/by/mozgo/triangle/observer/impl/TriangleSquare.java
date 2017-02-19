@@ -7,6 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Andrei Mozgo
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 public class TriangleSquare implements OperationObserver {
     private static TriangleSquare instance = null;
     private static final Logger LOGGER = LogManager.getLogger();
-    private ArrayList<Double> squares = new ArrayList<>();
+    private List<Double> squares = new ArrayList<>();
 
     public static TriangleSquare getInstance() {
         if (instance == null) {
@@ -23,7 +24,7 @@ public class TriangleSquare implements OperationObserver {
         return instance;
     }
 
-    public ArrayList<Double> getSquares() {
+    public List<Double> getSquares() {
         return squares;
     }
 
