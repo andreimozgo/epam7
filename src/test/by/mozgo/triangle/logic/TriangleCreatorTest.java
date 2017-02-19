@@ -15,7 +15,7 @@ import java.util.List;
 public class TriangleCreatorTest {
     @Test
     public void TestGenerateTriangles() {
-        ArrayList<String> lines = new ArrayList<>();
+        List<String> lines = new ArrayList<>();
         lines.add("1 2 4 3 5 6");
         Triangle triangle = new Triangle(0,new Point(1,2),new Point(4,3),new Point(5,6));
         List<Triangle> triangles = new ArrayList<>();

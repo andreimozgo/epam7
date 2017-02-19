@@ -15,7 +15,7 @@ public class TriangleCreator {
     private static final Logger LOGGER = LogManager.getLogger();
     private static final int MAX_NUMBER_OF_COORDINATES = 6;
 
-    public static List<Triangle> generateTriangles(ArrayList<String> inputLines) {
+    public static List<Triangle> generateTriangles(List<String> inputLines) {
         List<Triangle> triangles = new ArrayList<>();
 
         for (int i = 0; i < inputLines.size(); i++) {

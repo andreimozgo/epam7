@@ -32,7 +32,7 @@ public class TrianglesInputReader {
             }
         } catch (IOException e) {
             LOGGER.error("Input file not found!");
-            return null;
+            return lines;
         }
         return lines;
     }
