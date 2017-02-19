@@ -31,9 +31,9 @@ public class Triangle {
     }
 
     private void notifyObservers() {
-        Iterator it = observerList.iterator();
-        while (it.hasNext()) {
-            ((OperationObserver) it.next()).valueChanged(this);
+        Iterator iterator = observerList.iterator();
+        while (iterator.hasNext()) {
+            ((OperationObserver) iterator.next()).valueChanged(this);
         }
     }
 

@@ -45,14 +45,4 @@ public class TriangleLogicTest {
         TriangleSquare triangleSquare = TriangleLogic.calculateSquare(triangle);
         Assert.assertEquals(0.5, triangleSquare.getSquares().get(id), 0.0001);
     }
-
-    @Test
-    public void testNotifyObservers() {
-        TrianglePerimeter trianglePerimeter = TrianglePerimeter.getInstance();
-        TriangleSquare triangleSquare = TriangleSquare.getInstance();
-        triangle.addObserver(trianglePerimeter);
-        triangle.addObserver(triangleSquare);
-        Point newFirstPoint = new Point(-1,-1);
-        triangle.setFirstPoint(newFirstPoint);
-    }
 }

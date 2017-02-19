@@ -34,7 +34,6 @@ public class TrianglesInputReader {
             LOGGER.error("Input file not found!");
             return null;
         }
-
         return lines;
     }
 }

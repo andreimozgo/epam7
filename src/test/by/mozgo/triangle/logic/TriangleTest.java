@@ -27,9 +27,9 @@ public class TriangleTest {
         Point firstPoint = new Point(0, 0);
         Point secondPoint = new Point(1, 0);
         Point thirdPoint = new Point(0, 1);
-        double firstSide = TriangleLogic.calculateTriangleSide(firstPoint, secondPoint);
-        double secondSide = TriangleLogic.calculateTriangleSide(secondPoint, thirdPoint);
-        double thirdSide = TriangleLogic.calculateTriangleSide(thirdPoint, firstPoint);
+        double firstSide = TriangleLogic.calculateSide(firstPoint, secondPoint);
+        double secondSide = TriangleLogic.calculateSide(secondPoint, thirdPoint);
+        double thirdSide = TriangleLogic.calculateSide(thirdPoint, firstPoint);
         Assert.assertNotEquals("Triangle is rectangular", Math.pow(thirdSide, 2), Math.pow(firstSide, 2) + Math.pow(secondSide, 2), 0.0001);
         Assert.assertNotEquals("Triangle is rectangular", Math.pow(firstSide, 2), Math.pow(secondSide, 2) + Math.pow(thirdSide, 2), 0.0001);
         Assert.assertNotEquals("Triangle is rectangular", Math.pow(secondSide, 2), Math.pow(thirdSide, 2) + Math.pow(firstSide, 2), 0.0001);
