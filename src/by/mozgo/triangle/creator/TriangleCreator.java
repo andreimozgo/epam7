@@ -14,9 +14,10 @@ import java.util.List;
 public class TriangleCreator {
     private static final Logger LOGGER = LogManager.getLogger();
     private static final int MAX_NUMBER_OF_COORDINATES = 6;
-    private static List<Triangle> triangles = new ArrayList<>();
 
     public static List<Triangle> generateTriangles(ArrayList<String> inputLines) {
+        List<Triangle> triangles = new ArrayList<>();
+
         for (int i = 1; i <= inputLines.size(); i++) {
             String line = inputLines.get(i - 1);
             String[] coordinates = line.split("\\s");
