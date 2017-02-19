@@ -23,7 +23,6 @@ public class Point {
     public boolean equals(Object obj) {
         if (obj == null)
             return false;
-        // проверка на случай, если сравнение с самим собой
         if (obj == this)
             return true;
         if (obj.getClass() == this.getClass()) {

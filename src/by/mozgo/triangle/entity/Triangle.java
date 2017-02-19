@@ -41,10 +41,6 @@ public class Triangle {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public Point getFirstPoint() {
         return firstPoint;
     }
