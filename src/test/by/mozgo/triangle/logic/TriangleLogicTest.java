@@ -45,4 +45,27 @@ public class TriangleLogicTest {
         TriangleSquare triangleSquare = TriangleLogic.calculateSquare(triangle);
         Assert.assertEquals(0.5, triangleSquare.getSquare(id), 0.0001);
     }
+
+    @Test
+    public void testIsTriangleTrue() {
+        Assert.assertTrue("Triangle doesn't exist", TriangleLogic.isTriangle(triangle));
+    }
+
+    @Test
+    public void testIsTriangleFalse() {
+        triangle.setSecondPoint(firstPoint);
+        triangle.setThirdPoint(firstPoint);
+        Assert.assertFalse("Triangle exist", TriangleLogic.isTriangle(triangle));
+    }
+
+    @Test
+    public void testIsTriangleRectangularTrue() {
+        Assert.assertTrue("Triangle isn't rectangular", TriangleLogic.isTriangleRectangular(triangle));
+    }
+
+    @Test
+    public void testIsTriangleRectangularFalse() {
+        triangle.setSecondPoint(new Point(-1, -1));
+        Assert.assertFalse("Triangle is rectangular", TriangleLogic.isTriangleRectangular(triangle));
+    }
 }
