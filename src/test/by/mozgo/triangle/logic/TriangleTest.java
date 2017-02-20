@@ -3,35 +3,42 @@ package test.by.mozgo.triangle.logic;
 import by.mozgo.triangle.entity.Point;
 import by.mozgo.triangle.entity.Triangle;
 import by.mozgo.triangle.logic.TriangleLogic;
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
  * @author Andrei Mozgo
  */
 public class TriangleTest {
+    private int id;
+    private Point firstPoint;
+    private Point secondPoint;
+    private Point thirdPoint;
+    private Triangle triangle;
 
-    @Test
-    public void testTriangleExist() {
-        int id = 0;
-        Point firstPoint = new Point(0, 0);
-        Point secondPoint = new Point(1, 0);
-        Point thirdPoint = new Point(0, 1);
-        Triangle triangle = new Triangle(id, firstPoint, secondPoint, thirdPoint);
-        double square = TriangleLogic.calculateSquare(triangle).getSquare(id);
-        Assert.assertFalse("Triangle doesn't exist!", 0 == square);
+    @Before
+    public void initTriangle(){
+        id = 0;
+        firstPoint = new Point(0, 0);
+        secondPoint = new Point(1, 0);
+        thirdPoint = new Point(0, 1);
+        triangle = new Triangle(id, firstPoint, secondPoint, thirdPoint);
+    }
+
+    @After
+    public void destroyTriangle(){
+        triangle = null;
     }
 
     @Test
-    public void testTriangleRectangular() {
-        Point firstPoint = new Point(0, 0);
-        Point secondPoint = new Point(1, 0);
-        Point thirdPoint = new Point(0, 1);
-        double firstSide = TriangleLogic.calculateSide(firstPoint, secondPoint);
-        double secondSide = TriangleLogic.calculateSide(secondPoint, thirdPoint);
-        double thirdSide = TriangleLogic.calculateSide(thirdPoint, firstPoint);
-        Assert.assertNotEquals("Triangle is rectangular", Math.pow(thirdSide, 2), Math.pow(firstSide, 2) + Math.pow(secondSide, 2), 0.0001);
-        Assert.assertNotEquals("Triangle is rectangular", Math.pow(firstSide, 2), Math.pow(secondSide, 2) + Math.pow(thirdSide, 2), 0.0001);
-        Assert.assertNotEquals("Triangle is rectangular", Math.pow(secondSide, 2), Math.pow(thirdSide, 2) + Math.pow(firstSide, 2), 0.0001);
+    public void testIsTriangle() {
+        Assert.assertTrue("Triangle doesn't exist" , TriangleLogic.isTriangle(triangle));
+    }
+
+    @Test
+    public void testIsTriangleRectangular() {
+        Assert.assertTrue("Triangle isn't rectangular" , TriangleLogic.isTriangleRectangular(triangle));
     }
 }

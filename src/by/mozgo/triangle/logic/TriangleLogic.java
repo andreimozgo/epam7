@@ -7,6 +7,8 @@ import by.mozgo.triangle.observer.impl.TriangleSquare;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.math.BigDecimal;
+
 
 /**
  * @author Andrei Mozgo
@@ -39,5 +41,30 @@ public class TriangleLogic {
 
     public static double calculateSide(Point firstPoint, Point secondPoint) {
         return Math.hypot(firstPoint.getX() - secondPoint.getX(), firstPoint.getY() - secondPoint.getY());
+    }
+
+    public static boolean isTriangle(Triangle triangle) {
+        double square = TriangleLogic.calculateSquare(triangle).getSquare(triangle.getId());
+        if (square > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public static boolean isTriangleRectangular(Triangle triangle) {
+        BigDecimal firstSide = new BigDecimal(TriangleLogic.calculateSide(triangle.getFirstPoint(), triangle.getSecondPoint()));
+        BigDecimal secondSide = new BigDecimal(TriangleLogic.calculateSide(triangle.getSecondPoint(), triangle.getThirdPoint()));
+        BigDecimal thirdSide = new BigDecimal(TriangleLogic.calculateSide(triangle.getThirdPoint(), triangle.getFirstPoint()));
+        if ((thirdSide.multiply(thirdSide).setScale(10,1)).equals(firstSide.multiply(firstSide).add(secondSide.multiply(secondSide)).setScale(10,1))) {
+            return true;
+        }
+        if ((secondSide.multiply(secondSide).setScale(10,1)).equals(firstSide.multiply(firstSide).add(thirdSide.multiply(thirdSide)).setScale(10,1))) {
+            return true;
+        }
+        if ((firstSide.multiply(firstSide).setScale(10,1)).equals(secondSide.multiply(secondSide).add(thirdSide.multiply(thirdSide)).setScale(10,1))) {
+            return true;
+        }
+        return false;
     }
 }
