@@ -18,7 +18,7 @@ public class TriangleTest {
         Point secondPoint = new Point(1, 0);
         Point thirdPoint = new Point(0, 1);
         Triangle triangle = new Triangle(id, firstPoint, secondPoint, thirdPoint);
-        double square = TriangleLogic.calculateSquare(triangle).getSquares().get(id);
+        double square = TriangleLogic.calculateSquare(triangle).getSquare(id);
         Assert.assertFalse("Triangle doesn't exist!", 0 == square);
     }
 

@@ -37,12 +37,12 @@ public class TriangleLogicTest {
     @Test
     public void testCalculatePerimeter() {
         TrianglePerimeter trianglePerimeter = TriangleLogic.calculatePerimeter(triangle);
-        Assert.assertEquals(3.4142, trianglePerimeter.getPerimeters().get(id), 0.0001);
+        Assert.assertEquals(3.4142, trianglePerimeter.getPerimeter(id), 0.0001);
     }
 
     @Test
     public void testCalculateSquare() {
         TriangleSquare triangleSquare = TriangleLogic.calculateSquare(triangle);
-        Assert.assertEquals(0.5, triangleSquare.getSquares().get(id), 0.0001);
+        Assert.assertEquals(0.5, triangleSquare.getSquare(id), 0.0001);
     }
 }

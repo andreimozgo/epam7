@@ -24,15 +24,19 @@ public class TrianglePerimeter implements OperationObserver {
         return instance;
     }
 
-    public List<Double> getPerimeters() {
-        return perimeters;
+    public double getPerimeter(int id){
+        return perimeters.get(id);
+    }
+
+    public void addPerimeter(int id, double perimeter){
+        perimeters.add(id,perimeter);
     }
 
     @Override
     public void valueChanged(Triangle observed) {
         int id = observed.getId();
         LOGGER.info("Old triangular perimeter= " + perimeters.get(id));
-        double newPerimeter = TriangleLogic.calculatePerimeter(observed).getPerimeters().get(id);
+        double newPerimeter = TriangleLogic.calculatePerimeter(observed).getPerimeter(id);
         perimeters.set(observed.getId(), newPerimeter);
         LOGGER.info("New triangular perimeter= " + perimeters.get(id));
     }

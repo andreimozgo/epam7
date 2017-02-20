@@ -24,15 +24,19 @@ public class TriangleSquare implements OperationObserver {
         return instance;
     }
 
-    public List<Double> getSquares() {
-        return squares;
+    public double getSquare(int id) {
+        return squares.get(id);
+    }
+
+    public void addSquare(int id, double square) {
+        squares.add(id, square);
     }
 
     @Override
     public void valueChanged(Triangle observed) {
         int id = observed.getId();
         LOGGER.info("Old triangular square= " + squares.get(id));
-        double newSquare = TriangleLogic.calculateSquare(observed).getSquares().get(id);
+        double newSquare = TriangleLogic.calculateSquare(observed).getSquare(id);
         squares.set(observed.getId(), newSquare);
         LOGGER.info("New triangular square= " + squares.get(id));
     }
