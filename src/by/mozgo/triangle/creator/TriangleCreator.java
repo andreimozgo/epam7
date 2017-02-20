@@ -1,5 +1,6 @@
 package by.mozgo.triangle.creator;
 
+import by.mozgo.triangle.creator.exceptions.InputDataException;
 import by.mozgo.triangle.entity.Point;
 import by.mozgo.triangle.entity.Triangle;
 import org.apache.logging.log4j.LogManager;
@@ -15,7 +16,7 @@ public class TriangleCreator {
     private static final Logger LOGGER = LogManager.getLogger();
     private static final int MAX_NUMBER_OF_COORDINATES = 6;
 
-    public static List<Triangle> generateTriangles(List<String> inputLines) {
+    public static List<Triangle> generateTriangles(List<String> inputLines) throws InputDataException {
         List<Triangle> triangles = new ArrayList<>();
         int triangleId = 0;
         for (int i = 0; i < inputLines.size(); i++) {
@@ -32,6 +33,7 @@ public class TriangleCreator {
                 triangleId++;
             } catch (NumberFormatException e) {
                 LOGGER.error("Incorrect input line", e);
+                throw new InputDataException("Incorrect input line " + i);
             }
         }
         return triangles;

@@ -1,5 +1,8 @@
 package by.mozgo.triangle.reader;
 
+import by.mozgo.triangle.reader.exceptions.FileNotFoundReaderException;
+import by.mozgo.triangle.reader.exceptions.InputFileIsEmptyException;
+import by.mozgo.triangle.reader.exceptions.TrianglesInputReaderException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,23 +19,26 @@ import java.util.List;
 public class TrianglesInputReader {
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public static List<String> readData() {
+    public static List<String> readData(String filename) throws TrianglesInputReaderException {
+        if (filename == null) {
+            LOGGER.error("Input file not found!");
+            throw new FileNotFoundReaderException("Input file = null!");
+        }
         List<String> lines = new ArrayList<>();
-        File inputFile = new File("data/input.txt");
-
+        File inputFile = new File(filename);
         try {
             BufferedReader in = new BufferedReader(new FileReader(inputFile.getAbsoluteFile()));
-            try {
-                String s;
-                while ((s = in.readLine()) != null) {
-                    lines.add(s);
-                }
-            } finally {
-                in.close();
+            String s;
+            while ((s = in.readLine()) != null) {
+                lines.add(s);
             }
+            in.close();
         } catch (IOException e) {
             LOGGER.error("Input file not found!");
-            return lines;
+            throw new FileNotFoundReaderException("Input file not found!");
+        }
+        if (lines.size() == 0) {
+            throw new InputFileIsEmptyException("Input file empty");
         }
         return lines;
     }
