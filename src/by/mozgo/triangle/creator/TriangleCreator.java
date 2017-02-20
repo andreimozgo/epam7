@@ -17,7 +17,7 @@ public class TriangleCreator {
 
     public static List<Triangle> generateTriangles(List<String> inputLines) {
         List<Triangle> triangles = new ArrayList<>();
-
+        int triangleId = 0;
         for (int i = 0; i < inputLines.size(); i++) {
             String line = inputLines.get(i);
             String[] coordinates = line.split("\\s");
@@ -28,7 +28,8 @@ public class TriangleCreator {
                 Point firstPoint = new Point(Integer.valueOf(coordinates[0]), Integer.valueOf(coordinates[1]));
                 Point secondPoint = new Point(Integer.valueOf(coordinates[2]), Integer.valueOf(coordinates[3]));
                 Point thirdPoint = new Point(Integer.valueOf(coordinates[4]), Integer.valueOf(coordinates[5]));
-                triangles.add(new Triangle(i, firstPoint, secondPoint, thirdPoint));
+                triangles.add(new Triangle(triangleId, firstPoint, secondPoint, thirdPoint));
+                triangleId++;
             } catch (NumberFormatException e) {
                 LOGGER.error("Incorrect input line", e);
             }
