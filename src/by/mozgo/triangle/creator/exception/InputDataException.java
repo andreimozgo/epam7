@@ -1,4 +1,4 @@
-package by.mozgo.triangle.creator.exceptions;
+package by.mozgo.triangle.creator.exception;
 
 /**
  * @author Andrei Mozgo

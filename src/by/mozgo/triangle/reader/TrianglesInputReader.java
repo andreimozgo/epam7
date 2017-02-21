@@ -1,8 +1,6 @@
 package by.mozgo.triangle.reader;
 
-import by.mozgo.triangle.reader.exceptions.FileNotFoundReaderException;
-import by.mozgo.triangle.reader.exceptions.InputFileIsEmptyException;
-import by.mozgo.triangle.reader.exceptions.TrianglesInputReaderException;
+import by.mozgo.triangle.reader.exception.TriangleReaderException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,10 +17,10 @@ import java.util.List;
 public class TrianglesInputReader {
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public static List<String> readData(String filename) throws TrianglesInputReaderException {
+    public static List<String> readData(String filename) throws TriangleReaderException {
         if (filename == null) {
             LOGGER.fatal("Input file not found!");
-            throw new FileNotFoundReaderException("Input file = null!");
+            throw new TriangleReaderException("Input file = null!");
         }
         List<String> lines = new ArrayList<>();
         File inputFile = new File(filename);
@@ -35,10 +33,10 @@ public class TrianglesInputReader {
             in.close();
         } catch (IOException e) {
             LOGGER.fatal("Input file not found!");
-            throw new FileNotFoundReaderException("Input file not found!");
+            throw new TriangleReaderException("Input file not found!");
         }
         if (lines.size() == 0) {
-            throw new InputFileIsEmptyException("Input file empty");
+            throw new TriangleReaderException("Input file empty");
         }
         return lines;
     }

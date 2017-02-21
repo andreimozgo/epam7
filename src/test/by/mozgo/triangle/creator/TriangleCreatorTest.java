@@ -1,7 +1,7 @@
-package test.by.mozgo.triangle.logic;
+package test.by.mozgo.triangle.creator;
 
 import by.mozgo.triangle.creator.TriangleCreator;
-import by.mozgo.triangle.creator.exceptions.InputDataException;
+import by.mozgo.triangle.creator.exception.InputDataException;
 import by.mozgo.triangle.entity.Point;
 import by.mozgo.triangle.entity.Triangle;
 import org.junit.Assert;

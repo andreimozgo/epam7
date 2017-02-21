@@ -1,4 +1,4 @@
-package test.by.mozgo.triangle.logic;
+package test.by.mozgo.triangle.observer;
 
 import by.mozgo.triangle.entity.Point;
 import by.mozgo.triangle.entity.Triangle;

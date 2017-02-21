@@ -1,6 +1,6 @@
 package by.mozgo.triangle.creator;
 
-import by.mozgo.triangle.creator.exceptions.InputDataException;
+import by.mozgo.triangle.creator.exception.InputDataException;
 import by.mozgo.triangle.entity.Point;
 import by.mozgo.triangle.entity.Triangle;
 import org.apache.logging.log4j.LogManager;
