@@ -2,6 +2,7 @@ package by.mozgo.triangle.entity;
 
 import by.mozgo.triangle.logic.TriangleLogic;
 import by.mozgo.triangle.observer.OperationObserver;
+import by.mozgo.triangle.observer.TriangleChangeEvent;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -31,9 +32,10 @@ public class Triangle {
     }
 
     private void notifyObservers() {
+        TriangleChangeEvent event = new TriangleChangeEvent(this);
         Iterator iterator = observerList.iterator();
         while (iterator.hasNext()) {
-            ((OperationObserver) iterator.next()).valueChanged(this);
+            ((OperationObserver) iterator.next()).valueChanged(event);
         }
     }
 

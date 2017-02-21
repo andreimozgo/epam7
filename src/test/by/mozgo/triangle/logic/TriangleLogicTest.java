@@ -5,23 +5,20 @@ import by.mozgo.triangle.entity.Triangle;
 import by.mozgo.triangle.logic.TriangleLogic;
 import by.mozgo.triangle.observer.impl.TrianglePerimeter;
 import by.mozgo.triangle.observer.impl.TriangleSquare;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 /**
  * @author Andrei Mozgo
  */
 public class TriangleLogicTest {
-    private int id;
-    private Point firstPoint;
-    private Point secondPoint;
-    private Point thirdPoint;
-    private Triangle triangle;
+    private static int id;
+    private static Point firstPoint;
+    private static Point secondPoint;
+    private static Point thirdPoint;
+    private static Triangle triangle;
 
-    @Before
-    public void initTriangle(){
+    @BeforeClass
+    public static void initTriangle() {
         id = 0;
         firstPoint = new Point(0, 0);
         secondPoint = new Point(1, 0);
@@ -29,43 +26,52 @@ public class TriangleLogicTest {
         triangle = new Triangle(id, firstPoint, secondPoint, thirdPoint);
     }
 
-    @After
-    public void destroyTriangle(){
+    @AfterClass
+    public static void destroyTriangle() {
         triangle = null;
     }
 
     @Test
     public void testCalculatePerimeter() {
         TrianglePerimeter trianglePerimeter = TriangleLogic.calculatePerimeter(triangle);
-        Assert.assertEquals(3.4142, trianglePerimeter.getPerimeter(id), 0.0001);
+        double perimeter = trianglePerimeter.getPerimeter(id);
+        Assert.assertEquals(3.4142, perimeter, 0.0001);
     }
 
     @Test
     public void testCalculateSquare() {
         TriangleSquare triangleSquare = TriangleLogic.calculateSquare(triangle);
-        Assert.assertEquals(0.5, triangleSquare.getSquare(id), 0.0001);
+        double square = triangleSquare.getSquare(id);
+        Assert.assertEquals(0.5, square, 0.0001);
     }
 
     @Test
     public void testIsTriangleTrue() {
-        Assert.assertTrue("Triangle doesn't exist", TriangleLogic.isTriangle(triangle));
+        boolean isTriangle = TriangleLogic.isTriangle(triangle);
+        Assert.assertTrue("Triangle doesn't exist", isTriangle);
     }
 
     @Test
     public void testIsTriangleFalse() {
         triangle.setSecondPoint(firstPoint);
         triangle.setThirdPoint(firstPoint);
-        Assert.assertFalse("Triangle exist", TriangleLogic.isTriangle(triangle));
+        boolean isTriangle = TriangleLogic.isTriangle(triangle);
+        Assert.assertFalse("Triangle exist", isTriangle);
+        triangle.setSecondPoint(secondPoint);
+        triangle.setThirdPoint(thirdPoint);
     }
 
     @Test
     public void testIsTriangleRectangularTrue() {
-        Assert.assertTrue("Triangle isn't rectangular", TriangleLogic.isTriangleRectangular(triangle));
+        boolean isTriangleRectangular = TriangleLogic.isTriangleRectangular(triangle);
+        Assert.assertTrue("Triangle isn't rectangular", isTriangleRectangular);
     }
 
     @Test
     public void testIsTriangleRectangularFalse() {
         triangle.setSecondPoint(new Point(-1, -1));
-        Assert.assertFalse("Triangle is rectangular", TriangleLogic.isTriangleRectangular(triangle));
+        boolean isTriangleRectangular = TriangleLogic.isTriangleRectangular(triangle);
+        Assert.assertFalse("Triangle is rectangular", isTriangleRectangular);
+        triangle.setSecondPoint(secondPoint);
     }
 }

@@ -1,9 +1,11 @@
 package test.by.mozgo.triangle.reader;
 
-import by.mozgo.triangle.reader.TrianglesInputReader;
-import by.mozgo.triangle.reader.exception.TriangleReaderException;
+import by.mozgo.triangle.reader.TriangleReader;
+import by.mozgo.triangle.exception.TriangleReaderException;
 import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.List;
 
 /**
  * @author Andrei Mozgo
@@ -13,13 +15,14 @@ public class TriangleReaderTest {
     @Test
     public void testFileReader() throws TriangleReaderException {
         String filename = "data/input.txt";
-        Assert.assertTrue(TrianglesInputReader.readData(filename).size() > 0);
-
+        List<String> lines = TriangleReader.readData(filename);
+        boolean fileNotEmpty = lines.size() > 0;
+        Assert.assertTrue(fileNotEmpty);
     }
 
     @Test(expected = TriangleReaderException.class)
     public void testFileReaderException() throws TriangleReaderException {
         String filename = "";
-        TrianglesInputReader.readData(filename);
+        TriangleReader.readData(filename);
     }
 }

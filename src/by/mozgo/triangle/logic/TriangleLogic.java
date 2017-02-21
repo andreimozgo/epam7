@@ -4,6 +4,7 @@ import by.mozgo.triangle.entity.Point;
 import by.mozgo.triangle.entity.Triangle;
 import by.mozgo.triangle.observer.impl.TrianglePerimeter;
 import by.mozgo.triangle.observer.impl.TriangleSquare;
+import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,7 +24,7 @@ public class TriangleLogic {
         double thirdSide = calculateSide(triangle.getFirstPoint(), triangle.getThirdPoint());
         double perimeter = firstSide + secondSide + thirdSide;
         trianglePerimeter.addPerimeter(triangle.getId(), perimeter);
-        LOGGER.info("Triangle id=" + triangle.getId() + " perimeter = " + perimeter);
+        LOGGER.log(Level.INFO, "Triangle id= " + triangle.getId() + " perimeter = " + perimeter);
         return trianglePerimeter;
     }
 
@@ -35,7 +36,7 @@ public class TriangleLogic {
         double halfPerimeter = 0.5 * (firstSide + secondSide + thirdSide);
         double square = Math.sqrt(halfPerimeter * (halfPerimeter - firstSide) * (halfPerimeter - secondSide) * (halfPerimeter - thirdSide));
         triangleSquare.addSquare(triangle.getId(), square);
-        LOGGER.info("Triangle id=" + triangle.getId() + " square = " + square);
+        LOGGER.log(Level.INFO, "Triangle id= " + triangle.getId() + " square = " + square);
         return triangleSquare;
     }
 
@@ -45,11 +46,7 @@ public class TriangleLogic {
 
     public static boolean isTriangle(Triangle triangle) {
         double square = TriangleLogic.calculateSquare(triangle).getSquare(triangle.getId());
-        if (square > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return square > 0;
     }
 
     public static boolean isTriangleRectangular(Triangle triangle) {

@@ -4,23 +4,20 @@ import by.mozgo.triangle.entity.Point;
 import by.mozgo.triangle.entity.Triangle;
 import by.mozgo.triangle.observer.impl.TrianglePerimeter;
 import by.mozgo.triangle.observer.impl.TriangleSquare;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 /**
  * @author Andrei Mozgo
  */
 public class OperationObserverTest {
-    private int id;
-    private Point firstPoint;
-    private Point secondPoint;
-    private Point thirdPoint;
-    private Triangle triangle;
+    private static int id;
+    private static Point firstPoint;
+    private static Point secondPoint;
+    private static Point thirdPoint;
+    private static Triangle triangle;
 
-    @Before
-    public void initTriangle() {
+    @BeforeClass
+    public static void initTriangle() {
         id = 0;
         firstPoint = new Point(0, 0);
         secondPoint = new Point(1, 0);
@@ -28,8 +25,8 @@ public class OperationObserverTest {
         triangle = new Triangle(id, firstPoint, secondPoint, thirdPoint);
     }
 
-    @After
-    public void destroyTriangle() {
+    @AfterClass
+    public static void destroyTriangle() {
         triangle = null;
     }
 
@@ -49,7 +46,7 @@ public class OperationObserverTest {
         TriangleSquare triangleSquare = TriangleSquare.getInstance();
         double square = triangleSquare.getSquare(id);
         triangle.addObserver(triangleSquare);
-        Point newFirstPoint = new Point(-1, -1);
+        Point newFirstPoint = new Point(-2, -2);
         triangle.setFirstPoint(newFirstPoint);
         double changedSquare = triangleSquare.getSquare(id);
         Assert.assertNotEquals(square,changedSquare);
