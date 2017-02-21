@@ -21,7 +21,7 @@ public class TrianglesInputReader {
 
     public static List<String> readData(String filename) throws TrianglesInputReaderException {
         if (filename == null) {
-            LOGGER.error("Input file not found!");
+            LOGGER.fatal("Input file not found!");
             throw new FileNotFoundReaderException("Input file = null!");
         }
         List<String> lines = new ArrayList<>();
@@ -34,7 +34,7 @@ public class TrianglesInputReader {
             }
             in.close();
         } catch (IOException e) {
-            LOGGER.error("Input file not found!");
+            LOGGER.fatal("Input file not found!");
             throw new FileNotFoundReaderException("Input file not found!");
         }
         if (lines.size() == 0) {

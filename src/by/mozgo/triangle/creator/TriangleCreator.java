@@ -23,7 +23,7 @@ public class TriangleCreator {
             String line = inputLines.get(i);
             String[] coordinates = line.split("\\s");
             if (coordinates.length != MAX_NUMBER_OF_COORDINATES) {
-                LOGGER.error("Incorrect input line");
+                throw new InputDataException("Incorrect input line " + i);
             }
             try {
                 Point firstPoint = new Point(Integer.valueOf(coordinates[0]), Integer.valueOf(coordinates[1]));
@@ -32,7 +32,6 @@ public class TriangleCreator {
                 triangles.add(new Triangle(triangleId, firstPoint, secondPoint, thirdPoint));
                 triangleId++;
             } catch (NumberFormatException e) {
-                LOGGER.error("Incorrect input line", e);
                 throw new InputDataException("Incorrect input line " + i);
             }
         }
