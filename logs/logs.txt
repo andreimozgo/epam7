@@ -1,0 +1,113 @@
+2017-02-28 22:23:30 [FATAL] (TriangleReader.java:36) - Input file not found!
+2017-02-28 22:23:30 [FATAL] (TriangleReader.java:36) - Input file not found!data/input.txt
+2017-02-28 22:23:31 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 11.98140956982914
+2017-02-28 22:23:31 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 4.000000000000001
+2017-02-28 22:23:31 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 11.98140956982914
+2017-02-28 22:23:31 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 4.000000000000001
+2017-02-28 22:23:31 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 3.414213562373095
+2017-02-28 22:23:31 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 0.49999999999999983
+2017-02-28 22:23:31 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 0.49999999999999983
+2017-02-28 22:23:31 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 0.0
+2017-02-28 22:23:31 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 3.414213562373095
+2017-02-28 22:23:31 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 0.49999999999999983
+2017-02-28 22:23:31 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 3.414213562373095
+2017-02-28 22:23:31 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 0.49999999999999983
+2017-02-28 22:23:31 [INFO ] (TrianglePerimeter.java:41) - Old triangle perimeter= 3.414213562373095
+2017-02-28 22:23:31 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 5.8863495173726745
+2017-02-28 22:23:31 [INFO ] (TrianglePerimeter.java:44) - New triangle perimeter= 5.8863495173726745
+2017-02-28 22:23:31 [INFO ] (TrianglePerimeter.java:41) - Old triangle perimeter= 5.8863495173726745
+2017-02-28 22:23:31 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 8.625316113301073
+2017-02-28 22:23:31 [INFO ] (TrianglePerimeter.java:44) - New triangle perimeter= 8.625316113301073
+2017-02-28 22:23:31 [INFO ] (TriangleSquare.java:41) - Old triangular square= 0.49999999999999983
+2017-02-28 22:23:31 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 2.4999999999999996
+2017-02-28 22:23:31 [INFO ] (TriangleSquare.java:44) - New triangular square= 2.4999999999999996
+2017-02-28 22:31:44 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 11.98140956982914
+2017-02-28 22:31:44 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 4.000000000000001
+2017-02-28 22:31:44 [INFO ] (TriangleLogic.java:27) - Triangle id=1 perimeter = 11.98140956982914
+2017-02-28 22:31:44 [INFO ] (TriangleLogic.java:39) - Triangle id=1 square = 4.000000000000001
+2017-02-28 22:31:44 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 11.98140956982914
+2017-02-28 22:31:44 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 4.000000000000001
+2017-02-28 22:31:44 [INFO ] (TriangleLogic.java:27) - Triangle id=1 perimeter = 11.98140956982914
+2017-02-28 22:31:44 [INFO ] (TriangleLogic.java:39) - Triangle id=1 square = 4.000000000000001
+2017-02-28 22:31:54 [FATAL] (TriangleReader.java:36) - Input file not found!
+2017-02-28 22:31:54 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 11.98140956982914
+2017-02-28 22:31:54 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 4.000000000000001
+2017-02-28 22:31:54 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 11.98140956982914
+2017-02-28 22:31:54 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 4.000000000000001
+2017-02-28 22:31:54 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 3.414213562373095
+2017-02-28 22:31:54 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 0.49999999999999983
+2017-02-28 22:31:54 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 0.49999999999999983
+2017-02-28 22:31:54 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 0.0
+2017-02-28 22:31:54 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 3.414213562373095
+2017-02-28 22:31:54 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 0.49999999999999983
+2017-02-28 22:31:54 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 3.414213562373095
+2017-02-28 22:31:54 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 0.49999999999999983
+2017-02-28 22:31:54 [INFO ] (TrianglePerimeter.java:41) - Old triangle perimeter= 3.414213562373095
+2017-02-28 22:31:54 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 5.8863495173726745
+2017-02-28 22:31:55 [INFO ] (TrianglePerimeter.java:44) - New triangle perimeter= 5.8863495173726745
+2017-02-28 22:31:55 [INFO ] (TrianglePerimeter.java:41) - Old triangle perimeter= 5.8863495173726745
+2017-02-28 22:31:55 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 8.625316113301073
+2017-02-28 22:31:55 [INFO ] (TrianglePerimeter.java:44) - New triangle perimeter= 8.625316113301073
+2017-02-28 22:31:55 [INFO ] (TriangleSquare.java:41) - Old triangular square= 0.49999999999999983
+2017-02-28 22:31:55 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 2.4999999999999996
+2017-02-28 22:31:55 [INFO ] (TriangleSquare.java:44) - New triangular square= 2.4999999999999996
+2017-02-28 22:42:23 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 11.98140956982914
+2017-02-28 22:42:23 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 4.000000000000001
+2017-02-28 22:42:23 [INFO ] (TriangleLogic.java:27) - Triangle id=1 perimeter = 11.98140956982914
+2017-02-28 22:42:23 [INFO ] (TriangleLogic.java:39) - Triangle id=1 square = 4.000000000000001
+2017-02-28 22:42:23 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 11.98140956982914
+2017-02-28 22:42:23 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 4.000000000000001
+2017-02-28 22:42:23 [INFO ] (TriangleLogic.java:27) - Triangle id=1 perimeter = 11.98140956982914
+2017-02-28 22:42:23 [INFO ] (TriangleLogic.java:39) - Triangle id=1 square = 4.000000000000001
+2017-02-28 22:42:38 [FATAL] (TriangleReader.java:36) - Input file not found!
+2017-02-28 22:42:38 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 11.98140956982914
+2017-02-28 22:42:38 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 4.000000000000001
+2017-02-28 22:42:38 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 11.98140956982914
+2017-02-28 22:42:38 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 4.000000000000001
+2017-02-28 22:42:38 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 3.414213562373095
+2017-02-28 22:42:38 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 0.49999999999999983
+2017-02-28 22:42:38 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 0.49999999999999983
+2017-02-28 22:42:38 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 0.0
+2017-02-28 22:42:38 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 3.414213562373095
+2017-02-28 22:42:38 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 0.49999999999999983
+2017-02-28 22:42:38 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 3.414213562373095
+2017-02-28 22:42:38 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 0.49999999999999983
+2017-02-28 22:42:38 [INFO ] (TrianglePerimeter.java:41) - Old triangle perimeter= 3.414213562373095
+2017-02-28 22:42:38 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 5.8863495173726745
+2017-02-28 22:42:38 [INFO ] (TrianglePerimeter.java:44) - New triangle perimeter= 5.8863495173726745
+2017-02-28 22:42:38 [INFO ] (TrianglePerimeter.java:41) - Old triangle perimeter= 5.8863495173726745
+2017-02-28 22:42:38 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 8.625316113301073
+2017-02-28 22:42:38 [INFO ] (TrianglePerimeter.java:44) - New triangle perimeter= 8.625316113301073
+2017-02-28 22:42:38 [INFO ] (TriangleSquare.java:41) - Old triangular square= 0.49999999999999983
+2017-02-28 22:42:38 [INFO ] (TriangleLogic.java:39) - Triangle id=0 square = 2.4999999999999996
+2017-02-28 22:42:38 [INFO ] (TriangleSquare.java:44) - New triangular square= 2.4999999999999996
+2017-02-28 23:27:46 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 11.98140956982914
+2017-02-28 23:27:46 [INFO ] (TriangleLogic.java:40) - Triangle id=0 square = 4.000000000000001
+2017-02-28 23:27:46 [INFO ] (TriangleLogic.java:27) - Triangle id=1 perimeter = 11.98140956982914
+2017-02-28 23:27:46 [INFO ] (TriangleLogic.java:40) - Triangle id=1 square = 4.000000000000001
+2017-02-28 23:27:46 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 11.98140956982914
+2017-02-28 23:27:46 [INFO ] (TriangleLogic.java:40) - Triangle id=0 square = 4.000000000000001
+2017-02-28 23:27:46 [INFO ] (TriangleLogic.java:27) - Triangle id=1 perimeter = 11.98140956982914
+2017-02-28 23:27:46 [INFO ] (TriangleLogic.java:40) - Triangle id=1 square = 4.000000000000001
+2017-02-28 23:28:05 [FATAL] (TriangleReader.java:36) - Input file not found!
+2017-02-28 23:28:05 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 11.98140956982914
+2017-02-28 23:28:05 [INFO ] (TriangleLogic.java:40) - Triangle id=0 square = 4.000000000000001
+2017-02-28 23:28:05 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 11.98140956982914
+2017-02-28 23:28:05 [INFO ] (TriangleLogic.java:40) - Triangle id=0 square = 4.000000000000001
+2017-02-28 23:28:05 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 3.414213562373095
+2017-02-28 23:28:05 [INFO ] (TriangleLogic.java:40) - Triangle id=0 square = 0.49999999999999983
+2017-02-28 23:28:05 [INFO ] (TriangleLogic.java:40) - Triangle id=0 square = 0.49999999999999983
+2017-02-28 23:28:05 [INFO ] (TriangleLogic.java:40) - Triangle id=0 square = 0.0
+2017-02-28 23:28:05 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 3.414213562373095
+2017-02-28 23:28:05 [INFO ] (TriangleLogic.java:40) - Triangle id=0 square = 0.49999999999999983
+2017-02-28 23:28:05 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 3.414213562373095
+2017-02-28 23:28:05 [INFO ] (TriangleLogic.java:40) - Triangle id=0 square = 0.49999999999999983
+2017-02-28 23:28:05 [INFO ] (TrianglePerimeter.java:41) - Old triangle perimeter= 3.414213562373095
+2017-02-28 23:28:05 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 5.8863495173726745
+2017-02-28 23:28:05 [INFO ] (TrianglePerimeter.java:44) - New triangle perimeter= 5.8863495173726745
+2017-02-28 23:28:05 [INFO ] (TrianglePerimeter.java:41) - Old triangle perimeter= 5.8863495173726745
+2017-02-28 23:28:05 [INFO ] (TriangleLogic.java:27) - Triangle id=0 perimeter = 8.625316113301073
+2017-02-28 23:28:05 [INFO ] (TrianglePerimeter.java:44) - New triangle perimeter= 8.625316113301073
+2017-02-28 23:28:05 [INFO ] (TriangleSquare.java:41) - Old triangular square= 0.49999999999999983
+2017-02-28 23:28:05 [INFO ] (TriangleLogic.java:40) - Triangle id=0 square = 2.4999999999999996
+2017-02-28 23:28:05 [INFO ] (TriangleSquare.java:44) - New triangular square= 2.4999999999999996
