@@ -38,9 +38,9 @@ public class TrianglePerimeter implements OperationObserver {
     public void valueChanged(TriangleChangeEvent event) {
         Triangle newTriangle = event.getNewTriangle();
         int id = newTriangle.getId();
-        LOGGER.log(Level.INFO, "Old triangular perimeter= {}", perimeters.get(id));
+        LOGGER.log(Level.INFO, "Old triangle perimeter= " + perimeters.get(id));
         double newPerimeter = TriangleLogic.calculatePerimeter(newTriangle).getPerimeter(id);
         perimeters.set(newTriangle.getId(), newPerimeter);
-        LOGGER.log(Level.INFO, "New triangular perimeter= {}", perimeters.get(id));
+        LOGGER.log(Level.INFO, "New triangle perimeter= " + perimeters.get(id));
     }
 }

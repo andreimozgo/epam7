@@ -24,7 +24,7 @@ public class TriangleLogic {
         double thirdSide = calculateSide(triangle.getFirstPoint(), triangle.getThirdPoint());
         double perimeter = firstSide + secondSide + thirdSide;
         trianglePerimeter.addPerimeter(triangle.getId(), perimeter);
-        LOGGER.log(Level.INFO, "Triangle id= " + triangle.getId() + " perimeter = " + perimeter);
+        LOGGER.log(Level.INFO, "Triangle id=" + triangle.getId() + " perimeter = " + perimeter);
         return trianglePerimeter;
     }
 
@@ -36,7 +36,7 @@ public class TriangleLogic {
         double halfPerimeter = 0.5 * (firstSide + secondSide + thirdSide);
         double square = Math.sqrt(halfPerimeter * (halfPerimeter - firstSide) * (halfPerimeter - secondSide) * (halfPerimeter - thirdSide));
         triangleSquare.addSquare(triangle.getId(), square);
-        LOGGER.log(Level.INFO, "Triangle id= " + triangle.getId() + " square = " + square);
+        LOGGER.log(Level.INFO, "Triangle id=" + triangle.getId() + " square = " + square);
         return triangleSquare;
     }
 
