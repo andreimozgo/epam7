@@ -1,16 +1,7 @@
 .idea
-*.iws
 *.iml
-/src/lib/
 /out/
-/logs/
+/lib/
 .gitignore
 *.class
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
 *.jar
-*.war
-*.ear
