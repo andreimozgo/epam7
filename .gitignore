@@ -1,7 +1,0 @@
-.idea
-*.iml
-/out/
-/lib/
-.gitignore
-*.class
-*.jar
