@@ -4,7 +4,6 @@ import by.mozgo.triangle.creator.TriangleCreator;
 import by.mozgo.triangle.entity.Point;
 import by.mozgo.triangle.entity.Triangle;
 import by.mozgo.triangle.exception.TriangleCreatorException;
-import by.mozgo.triangle.exception.TriangleReaderException;
 import by.mozgo.triangle.reader.TriangleReader;
 import org.junit.Assert;
 import org.junit.Test;
@@ -17,7 +16,7 @@ import java.util.List;
  */
 public class MainTest {
     @Test
-    public void testProgram() throws TriangleReaderException, TriangleCreatorException {
+    public void testProgram() throws TriangleCreatorException {
         String filename = "data/input.txt";
         int firstId = 0;
         int secondId = 1;

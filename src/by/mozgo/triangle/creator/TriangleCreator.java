@@ -29,7 +29,7 @@ public class TriangleCreator {
                 triangles.add(new Triangle(triangleId, firstPoint, secondPoint, thirdPoint));
                 triangleId++;
             } catch (NumberFormatException e) {
-                throw new TriangleCreatorException("Incorrect input line " + i);
+                throw new TriangleCreatorException(e + " Incorrect input line " + i);
             }
         }
         return triangles;

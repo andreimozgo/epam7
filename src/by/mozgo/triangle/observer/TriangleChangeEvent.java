@@ -6,7 +6,7 @@ import by.mozgo.triangle.entity.Triangle;
  * @author Andrei Mozgo
  */
 public class TriangleChangeEvent {
-    Triangle newTriangle;
+    private Triangle newTriangle;
 
     public TriangleChangeEvent(Triangle newTriangle) {
         this.newTriangle = newTriangle;
