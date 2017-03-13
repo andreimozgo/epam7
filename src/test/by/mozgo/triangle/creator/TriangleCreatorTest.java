@@ -1,9 +1,9 @@
 package test.by.mozgo.triangle.creator;
 
 import by.mozgo.triangle.creator.TriangleCreator;
-import by.mozgo.triangle.exception.TriangleCreatorException;
 import by.mozgo.triangle.entity.Point;
 import by.mozgo.triangle.entity.Triangle;
+import by.mozgo.triangle.exception.TriangleCreatorException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class TriangleCreatorTest {
     @Test
-    public void TestGenerateTriangles() throws TriangleCreatorException {
+    public void testGenerateTriangles() throws TriangleCreatorException {
         List<String> lines = new ArrayList<>();
         lines.add("1 2 4 3 5 6");
         Triangle triangle = new Triangle(0, new Point(1, 2), new Point(4, 3), new Point(5, 6));
@@ -26,7 +26,7 @@ public class TriangleCreatorTest {
     }
 
     @Test(expected = TriangleCreatorException.class)
-    public void TestGenerateTrianglesException() throws TriangleCreatorException {
+    public void testGenerateTrianglesException() throws TriangleCreatorException {
         List<String> lines = new ArrayList<>();
         lines.add("1 2 w 3 5 6");
         TriangleCreator.generateTriangles(lines);
