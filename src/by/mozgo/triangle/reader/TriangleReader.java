@@ -34,7 +34,7 @@ public class TriangleReader {
             LOGGER.log(Level.FATAL, "Input file isn't found! " + filename);
             throw new RuntimeException(e + " Input file isn't found! " + filename);
         }
-        if (lines.size() == 0) {
+        if (lines.isEmpty()) {
             LOGGER.log(Level.FATAL, "Input file is empty! " + filename);
             throw new RuntimeException("Input file is empty! " + filename);
         }
