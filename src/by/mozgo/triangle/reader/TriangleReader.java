@@ -29,7 +29,6 @@ public class TriangleReader {
             while ((s = in.readLine()) != null) {
                 lines.add(s);
             }
-            in.close();
         } catch (IOException e) {
             LOGGER.log(Level.FATAL, "Input file isn't found! " + filename);
             throw new RuntimeException(e + " Input file isn't found! " + filename);
