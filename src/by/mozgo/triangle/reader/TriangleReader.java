@@ -17,15 +17,14 @@ import java.util.List;
 public class TriangleReader {
     private static final Logger LOGGER = LogManager.getLogger();
 
-    public static List<String> readData(String filename) throws RuntimeException {
+    public static List<String> readData(String filename) {
         if (filename == null) {
             LOGGER.log(Level.FATAL, "Input filename = null!");
             throw new RuntimeException("Input filename = null!");
         }
         List<String> lines = new ArrayList<>();
         File inputFile = new File(filename);
-        try {
-            BufferedReader in = new BufferedReader(new FileReader(inputFile));
+        try (BufferedReader in = new BufferedReader(new FileReader(inputFile))) {
             String s;
             while ((s = in.readLine()) != null) {
                 lines.add(s);
